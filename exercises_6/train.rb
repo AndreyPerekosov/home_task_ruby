@@ -9,10 +9,7 @@ class Train
 	@@numbers = {}
 
 	def self.find(number)
-		@@numbers.each do |k, object|
-		 return object if k == number
-		end
-		return nil
+		@@numbers[number]
 	end
 
 
