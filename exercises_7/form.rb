@@ -1,3 +1,14 @@
+require_relative 'railcar' 
+require_relative 'psngr_railcar'  
+require_relative 'cargo_railcar' 
+require_relative 'train' 
+require_relative 'cargo_train' 
+require_relative 'psngr_train' 
+require_relative 'route' 
+require_relative 'station'
+
+
+
 class Form
   def initialize
     @stations = {}
@@ -197,3 +208,6 @@ class Form
   end
 
 end
+
+start = Form.new
+start.menu
