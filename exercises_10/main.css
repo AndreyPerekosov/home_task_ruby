@@ -1,0 +1,21 @@
+ .main h1, .main h2{
+    font-weight: bold;
+    color: black;
+}
+
+.nav a {
+    font-weight: bold;
+}
+
+.nav h4 {
+    font-weight: bold;
+    color: #787878;
+    margin-left: 15px;
+    font-size: 15px;
+}
+.nav ul{
+    border-bottom: 1px solid white;
+}
+.btn {
+    margin-top: -10px;
+}
