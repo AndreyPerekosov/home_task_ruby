@@ -6,45 +6,32 @@ module InstanceCounter
 
 
   module ClassMethods
-		
-		
-		def instances(var) 
-       var.size
-    end
+    attr_accessor :instances
   end
 	
 	module InstanceMethods	
 	protected
-		def register_instance(var)
-      var << self
+		def register_instance
+      self.class.instances ||= 0
+      self.class.instances += 1
 		end
 	end
 end
 
 class A
-  @@count = []
 
   include InstanceCounter
-  
-  def self.count
-  puts instances(@@count)
-  end
 
 	def initialize
-		register_instance(@@count)
+		register_instance
 	end
 end
 
 class B
-	@@count = []
 
   include InstanceCounter
-	
-  def self.count
-  puts instances(@@count)
-  end
 
   def initialize
-		register_instance(@@count)
+		register_instance
 	end
 end
